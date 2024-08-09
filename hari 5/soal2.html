@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Berlatih Fungsi</h1>
+    <h3>Contoh Soal</h3>
+    <div id="contohJawaban"></div>
+    <h3>Soal No.1 teriak</h3>
+    <div id="jawaban1"></div>
+    <h3>Soal No.2 perkalian</h3>
+    <div id="jawaban2"></div>
+    <h3>Soal No.3 data</h3>
+    <div id="jawaban3"></div>
+
+    <script>
+      // CONTOH
+      function tampilkan() {
+        document.getElementById("contohJawaban").innerHTML = "Aku Tampil";
+      }
+      //Jalankan function
+      tampilkan();
+
+      // Soal No. 1 Fungsi Teriak
+      function teriak() {
+        return "Halo Function!";
+      }
+      document.getElementById("jawaban1").innerHTML = teriak();
+      function kalikan(num1, num2) {
+        // Code kamu mulai dari sini
+        return num1 * num2;
+      }
+      document.getElementById("jawaban2").innerHTML = kalikan(5, 4);
+
+      var nama = "BudiJago"
+      var umur = "16"
+      var alamat = "JL. Jago Raya"
+      var hobi = "Osu"
+      function buatKalimat(nama, umur, alamat, hobi) {
+        var kalimatBaru = "Nama saya " + nama + " umur saya " + umur + " alamat saya " + alamat + " hobi saya " + hobi + "!";
+        return(kalimatBaru)
+        // Code kamu mulai dari sini // Tampilkan dengan cara document.getElementById("jawaban3").innerHTML seperti di CONTOH.
+      }
+      document.getElementById("jawaban3").innerHTML = buatKalimat(nama, umur, alamat, hobi);
+      // Jalankan function buatKalimat var name = "John Doe"; var age = 30; var address = "Jln. Malioboro, Yogjakarta"; var hobby = "gaming"; buatKalimat(name, age, address, hobby);
+    </script>
+  </body>
+</html>
