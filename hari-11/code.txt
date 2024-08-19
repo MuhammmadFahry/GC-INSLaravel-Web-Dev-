@@ -1,0 +1,50 @@
+Table user {
+  id int [pk, increment]
+  username varchar
+  email varchar
+  password varchar
+}
+
+Table profile {
+  id int [pk, increment]
+  user_id int [ref: > user.id]
+  age int
+  bio text
+  address varchar
+}
+
+Table genre {
+  id int [pk, increment]
+  name varchar
+}
+
+Table movie {
+  id int [pk, increment]
+  title varchar
+  summary text
+  year int
+  poster varchar
+  genre_id int [ref: > genre.id]
+}
+
+Table review {
+  id int [pk, increment]
+  user_id int [ref: > user.id]
+  movie_id int [ref: > movie.id]
+  rating int
+  comment text
+}
+
+Table cast {
+  id int [pk, increment]
+  name varchar
+  age int
+  bio text
+}
+
+Table movie_cast {
+  movie_id int [ref: > movie.id]
+  cast_id int [ref: > cast.id]
+  role varchar
+  primary key (movie_id, cast_id)
+}
